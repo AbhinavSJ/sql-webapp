@@ -10,5 +10,10 @@ export default function Home() {
       router.push("");
     }
   });
-  return <h3>Redirecting...</h3>;
+  return (
+  <div>
+    <div>dssdds</div>
+    <h3>Redirecting...</h3>;
+
+  </div>)
 }
