@@ -24,7 +24,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
+    "husky": "^4.3.8",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3"
   },
