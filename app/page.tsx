@@ -11,9 +11,9 @@ export default function Home() {
     }
   });
   return (
-  <div>
-                  <div>dssdds</div>
-        <h3>Redirecting...</h3>;
-
-  </div>)
+    <div>
+              <div>dssdds</div>
+            <h3>Redirecting...</h3>;
+    </div>
+  );
 }
