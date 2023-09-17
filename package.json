@@ -11,7 +11,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
@@ -33,9 +33,6 @@
     "prettier": "3.0.3"
   },
   "lint-staged": {
-    "*.{js,json,css,md,html}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "*": "prettier --write"
   }
 }
