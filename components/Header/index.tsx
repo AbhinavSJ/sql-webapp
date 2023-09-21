@@ -8,7 +8,7 @@ type HeaderProps = {
 };
 
 const redirectSite = () => {
-  window.open("https://github.com/AbhinavSJ/sql-app", "_blank");
+  window.open("https://github.com/AbhinavSJ/sql-webapp", "_blank");
 };
 const Header = ({ headerText }: HeaderProps) => {
   return (

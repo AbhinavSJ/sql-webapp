@@ -41,7 +41,7 @@ export default function Mainpage() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full ">
       <div className="border rounded p-6 m-8">
         <div className="flex justify-between ">
           <div className="flex items-center">SQL Query:</div>
@@ -69,7 +69,7 @@ export default function Mainpage() {
       </div>
 
       {/* The table section */}
-      <div className="px-8 ">
+      <div className="mx-8 ">
         <Datatable
           columns={generateColumnsFromJson(tableValues)}
           data={tableValues}

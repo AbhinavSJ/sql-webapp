@@ -56,7 +56,7 @@ export function Datatable<TData, TValue>({
   return (
     <div>
       {/* Div for table*/}
-      <div className="rounded-md border h-[550px] max-w-[1656px] overflow-y-auto overflow-x-hidden">
+      <div className="rounded-md border h-[550px] max-w-full overflow-auto ">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => {

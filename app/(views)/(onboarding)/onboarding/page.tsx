@@ -49,7 +49,7 @@ const Onboard = () => {
     Setconnecting(true);
     setTimeout(() => {
       router.push("/mainpage");
-    }, 2000);
+    }, 1000);
   };
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
@@ -57,7 +57,6 @@ const Onboard = () => {
     sessionStorage.setItem("isOnboarded", "true");
 
     connectDB();
-    console.log(values);
   };
 
   return (
