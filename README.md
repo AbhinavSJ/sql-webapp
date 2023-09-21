@@ -1,3 +1,29 @@
+## SQL webapp
+
+Click [here](https://atlan-sql-webapp.vercel.app/) to got visit the deployed app on vercel
+
+This is a simple App to connect to a DB so as to query all the associated tables in the DB
+
+## FEATURES
+
+- Onboarding flow with all the industry standard form setup
+- An app that gets all the tables associate to a DB after onboarding and lets you query any table and display results in a paginated table
+- ability to download those results
+- custom defined core ui elements
+
+## Limitations or scope to improvements
+-  Each table cell can be formatted to have max width and overflow rules, currently unhandled which makes some tables rendered appear non-uniform (employees table)
+-  Can modularize the code to a little more of an extent for scalability and simplicty, currently some components have too many functionalities and elements defined in a single component (eg: datatable)
+-  since the root is wrapped using context API, have to look out for unnecessary re-rendering of parent components and handle them
+
+## Libraries
+- [shadcn](https://ui.shadcn.com/) - for getting bare customisable ui core components and elements that i was able to customise for my use case
+- react-hook-forms, zodresolver - to help with handling forms
+- [husky](https://typicode.github.io/husky/) - for processing pre commit prettier hook
+- @types/react-syntax-highlighter - for getting syntax-highlighted sql quuery
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -27,8 +53,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
