@@ -29,6 +29,3 @@ export function generateColumnsFromJson(
 
   return columns;
 }
-
-// Usage in your component
-// const columns = generateColumnsFromJson(customerData);

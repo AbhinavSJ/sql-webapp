@@ -10,9 +10,7 @@ import API from "@/app/services/api";
 import { Loader2 } from "lucide-react";
 
 import Datatable from "@/components/ui/datatable/datatable";
-// import { columns } from "@/components/ui/datatable/columns";
-import customerData from "@/public/customers.json";
-import { generateColumnsFromJson } from "@/components/ui/datatable/columns";
+import { generateColumnsFromJson } from "@/components/ui/datatable/columns"; //custom script to generate dynamic column data
 import { GlobalContext } from "@/app/context/store";
 
 export default function Mainpage() {
@@ -47,7 +45,7 @@ export default function Mainpage() {
       <div className="border rounded p-6 m-8">
         <div className="flex justify-between ">
           <div className="flex items-center">SQL Query:</div>
-
+          {/* The editor section */}
           <div className="flex items-center">
             <EditorInputDialog SubmitText={handleQuery} query={sqlQuery} />
             <Button
@@ -70,6 +68,7 @@ export default function Mainpage() {
         </div>
       </div>
 
+      {/* The table section */}
       <div className="px-8 ">
         <Datatable
           columns={generateColumnsFromJson(tableValues)}

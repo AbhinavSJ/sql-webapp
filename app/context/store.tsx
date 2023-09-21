@@ -18,7 +18,6 @@ const initialState: StateType = {
 };
 
 const reducer = (state: StateType, action: ActionType) => {
-  console.log(state, action);
   switch (action.type) {
     case "SET_DB":
       return { ...state, dbName: action.payload };

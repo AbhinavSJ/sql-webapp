@@ -41,7 +41,7 @@ const Sidebar = ({ database }: SidebarProps) => {
     <div className="bg-[#1E2021] w-56 py-8 ">
       <div className="px-6 flex">
         <HardDriveDownload />
-        <div className="ml-3">DB Name</div>
+        <div className="ml-3">{state.dbName}</div>
       </div>
       <div className=" text-white mt-10 flex flex-col border-t border-slate-700">
         {SIDEBAR_OPTIONS.map((item, i) => (
