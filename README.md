@@ -1,26 +1,26 @@
 ## SQL webapp
 
-Click [here](https://atlan-sql-webapp.vercel.app/) to got visit the deployed app on vercel
+Click [here](https://atlan-sql-webapp.vercel.app/) to go visit the deployed app on vercel
 
-This is a simple App to connect to a DB so as to query all the associated tables in the DB
+This is a simple App to connect to a DB and query all the associated tables.
 
 ## FEATURES
 
-- Onboarding flow with all the industry standard form setup
-- An app that gets all the tables associate to a DB after onboarding and lets you query any table and display results in a paginated table
-- ability to download those results
-- custom defined core ui elements
+- Onboarding flow with the industry standard form setup
+- An app that gets all the tables associated to a DB after onboarding and lets you query any table and display results in a paginated table
+- ability to download the queried results
+- custom defined core ui components
 
-## Limitations or scope to improvements
+## Limitations or scope of improvements
 -  Each table cell can be formatted to have max width and overflow rules, currently unhandled which makes some tables rendered appear non-uniform (employees table)
--  Can modularize the code to a little more of an extent for scalability and simplicty, currently some components have too many functionalities and elements defined in a single component (eg: datatable)
+-  Can modularize the code to a little more of an extent for scalability and simplicity, currently some components have too many functionalities and elements embedded in a single component (eg: datatable)
 -  since the root is wrapped using context API, have to look out for unnecessary re-rendering of parent components and handle them
 
 ## Libraries
 - [shadcn](https://ui.shadcn.com/) - for getting bare customisable ui core components and elements that i was able to customise for my use case
 - react-hook-forms, zodresolver - to help with handling forms
 - [husky](https://typicode.github.io/husky/) - for processing pre commit prettier hook
-- @types/react-syntax-highlighter - for getting syntax-highlighted sql quuery
+- @types/react-syntax-highlighter - for getting syntax-highlighted sql query
 
 
 
