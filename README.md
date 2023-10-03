@@ -11,7 +11,7 @@ This is a simple App to connect to a DB and query all the associated tables.
 - Ability to download the queried results
 - Custom defined core ui components
 
-## Limitations or scope of improvements
+## Limitations or scope for improvements
 -  Each table cell can be formatted to have max width and overflow rules, currently unhandled which makes some tables rendered appear non-uniform (employees table)
 -  Can modularize the code to a little more of an extent for scalability and simplicity, currently some components have too many functionalities and elements embedded in a single component (eg: datatable)
 -  Since the root is wrapped using context API, have to look out for unnecessary re-rendering of parent components and handle them
