@@ -55,6 +55,7 @@ const Onboard = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     dispatch({ type: "SET_DB", payload: values.dbname });
     sessionStorage.setItem("isOnboarded", "true");
+    sessionStorage.setItem("dbName", values.dbname);
 
     connectDB();
   };

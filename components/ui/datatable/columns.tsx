@@ -1,3 +1,5 @@
+"use client";
+
 import customerData from "@/public/customers.json";
 import employeeData from "@/public/employees.json";
 import { ColumnDef } from "@tanstack/react-table";
@@ -25,6 +27,11 @@ export function generateColumnsFromJson(
   const columns: ColumnDef<jsonDataType>[] = keys.map((key) => ({
     header: key,
     accessorKey: key,
+    cell: ({ row }) => {
+      return (
+        <div className="text-ellipsis overflow-hidden">{row.getValue(key)}</div>
+      );
+    },
   }));
 
   return columns;

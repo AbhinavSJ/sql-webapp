@@ -7,7 +7,7 @@ const dashboardLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="h-screen flex flex-col">
       <Header headerText="SQL app" />
       <div className="flex flex-1">
-        <Sidebar database="assd" />
+        <Sidebar />
         <div className="w-screen"> {children}</div>
       </div>
     </div>

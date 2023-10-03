@@ -41,9 +41,12 @@ const EditorInputDialog = ({ SubmitText, query }: DialogProps) => {
           Edit query
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="bg-black">
         <DialogHeader>
-          <DialogTitle>Add query</DialogTitle>
+          <DialogTitle className="flex justify-between">
+            <div>Add query</div>
+            <button onClick={() => setisOpen(false)}>x</button>
+          </DialogTitle>
           <DialogDescription>
             <Textarea
               className="bg-black text-white mt-4"

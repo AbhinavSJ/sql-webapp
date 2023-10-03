@@ -9,16 +9,12 @@ import { SIDEBAR_OPTIONS } from "./sidebaroptions";
 import API from "@/app/services/api";
 import { Button } from "../ui/button";
 
-type SidebarProps = {
-  database: string;
-};
-
 type Table = {
-  tableName: string;
+  name: string;
   // Add other properties related to tables here
 };
 
-const Sidebar = ({ database }: SidebarProps) => {
+const Sidebar = () => {
   const { state, dispatch } = useContext(GlobalContext);
 
   //rendering all the tables data got from connecting DB
@@ -27,7 +23,7 @@ const Sidebar = ({ database }: SidebarProps) => {
   const [tables, setTables] = useState<Table[]>([]);
   const fetchTables = async () => {
     try {
-      const response: any = await API.Table.getTables(database);
+      const response: any = await API.Table.getTables(state.dbName);
       setTables(response);
     } catch (error) {
       console.error("Error fetching tables:", error);
@@ -44,7 +40,7 @@ const Sidebar = ({ database }: SidebarProps) => {
         <div className="ml-3">{state.dbName}</div>
       </div>
       <div className=" text-white mt-10 flex flex-col border-t border-slate-700">
-        {SIDEBAR_OPTIONS.map((item, i) => (
+        {tables.map((item, i) => (
           <Button
             key={i}
             className={`w-auto py-8 hover:bg-[#4AB567] border-b border-slate-700 ${

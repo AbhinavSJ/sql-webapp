@@ -23,23 +23,16 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
 }
 
+//To download the resultant data post the query
 const downloadJson = (data: any[], filename: string) => {
-  // Convert the data to a JSON string
   const jsonData = JSON.stringify(data);
-
-  // Create a Blob object for the JSON data
   const blob = new Blob([jsonData], { type: "application/json" });
-
-  // Create a URL for the Blob
   const url = URL.createObjectURL(blob);
-
-  // Create a temporary <a> element and trigger a click event to download the file
   const a = document.createElement("a");
   a.href = url;
   a.download = filename;
   a.click();
 
-  // Release the Blob URL
   URL.revokeObjectURL(url);
 };
 

@@ -38,6 +38,7 @@ export default function Mainpage() {
 
   const handleQuery = (val: string) => {
     setsqlQuery(val);
+    callTableData;
   };
 
   return (
@@ -70,10 +71,14 @@ export default function Mainpage() {
 
       {/* The table section */}
       <div className="mx-8 ">
-        <Datatable
-          columns={generateColumnsFromJson(tableValues)}
-          data={tableValues}
-        />
+        {loading ? (
+          "Loading..."
+        ) : (
+          <Datatable
+            columns={generateColumnsFromJson(tableValues)}
+            data={tableValues}
+          />
+        )}
       </div>
     </div>
   );
