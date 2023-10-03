@@ -15,6 +15,7 @@ This is a simple App to connect to a DB and query all the associated tables.
 -  Each table cell can be formatted to have max width and overflow rules, currently unhandled which makes some tables rendered appear non-uniform (employees table)
 -  Can modularize the code to a little more of an extent for scalability and simplicity, currently some components have too many functionalities and elements embedded in a single component (eg: datatable)
 -  Since the root is wrapped using context API, have to look out for unnecessary re-rendering of parent components and handle them
+-  unauthenticated users or users without going through onboarding can directly visit the /mainpage, have to write a middleware to redirect traffic to onboarding or signin page if they try to access protected routes without auth
 
 ## Libraries
 - [shadcn](https://ui.shadcn.com/) - for getting bare customisable ui core components and elements that i was able to customise for my use case
